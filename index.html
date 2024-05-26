@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Guard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wallet Guard</h1>
+        <div class="expense-form">
+            <input type="date" id="date">
+            <input type="text" id="description" placeholder="Expense Description">
+            <input type="number" id="amount" placeholder="Amount">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div class="expense-list">
+            <h2>Expenses</h2>
+            <ul id="expenses"></ul>
+        </div>
+        <div class="total">
+            <h2>Total: ₹<span id="total">0.00</span></h2>
+            <button onclick="newExpenses()">New</button>
+        </div>
+        <div class="date-total">
+            <h2>Expenses on <input type="date" id="filter-date" onchange="updateDateTotal()">Total: ₹<span id="date-total">0.00</span></h2>
+            <ul id="date-expenses"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
